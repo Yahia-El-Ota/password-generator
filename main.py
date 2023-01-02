@@ -9,6 +9,7 @@ nr_letters= int(input("How many letters would you like in your password?\n"))
 nr_symbols = int(input(f"How many symbols would you like?\n"))
 nr_numbers = int(input(f"How many numbers would you like?\n"))
 
+#Generate random letters, symbols and numbers for the password
 password= []
 for n in range(0,nr_letters):
   password += random.choice(letters)
@@ -19,9 +20,10 @@ for n in range(0,nr_symbols):
 for n in range(0,nr_numbers):
   password += random.choice(numbers)
 
+#Shuffle the order in the array
 random.shuffle(password)
-print(f"{password}")
 
+#Change the format from an array to a string so the user can copy it 
 password_contents= ""
 for n in password:
   password_contents += n
